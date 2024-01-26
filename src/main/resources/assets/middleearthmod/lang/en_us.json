@@ -1,3 +1,6 @@
 {
-  "item.middleearthmod.dwarfiron": "Dwarfiron"
+  "item.middleearthmod.dwarfiron": "Dwarfiron",
+  "item.middleearthmod.rawdwarfiron": "Raw Dwarfiron",
+
+  "creativetab.middleearth_tab": "Dwarf Middleearth Tab"
 }

@@ -1,6 +1,8 @@
 package net.andrew.middleearthmod;
 
 import com.mojang.logging.LogUtils;
+import net.andrew.middleearthmod.block.ModBlocks;
+import net.andrew.middleearthmod.item.ModCreativeModTabs;
 import net.andrew.middleearthmod.item.Moditems;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
@@ -25,7 +27,11 @@ public class MiddleearthMod {
 
     public MiddleearthMod() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
+
+        ModCreativeModTabs.register(modEventBus);
+
         Moditems.register(modEventBus);
+        ModBlocks.register(modEventBus);
 
 
 
@@ -44,6 +50,7 @@ public class MiddleearthMod {
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
         if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
             event.accept(Moditems.DWARFIRON);
+            event.accept(Moditems.RAW_DWARFIRON);
         }
 
     }

@@ -13,6 +13,8 @@ public class Moditems {
 
     public static final RegistryObject<Item> DWARFIRON = ITEMS.register("dwarfiron",
             ()-> new Item(new Item.Properties()));
+    public static final RegistryObject<Item> RAW_DWARFIRON =ITEMS.register("raw_dwarfiron",
+            ()-> new Item(new Item.Properties()));
 
     public static void register(IEventBus eventBus){
         ITEMS.register(eventBus);
