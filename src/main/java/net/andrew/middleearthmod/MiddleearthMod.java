@@ -1,6 +1,9 @@
 package net.andrew.middleearthmod;
 
 import com.mojang.logging.LogUtils;
+import net.andrew.middleearthmod.item.Moditems;
+import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
@@ -18,14 +21,15 @@ import org.slf4j.Logger;
 public class MiddleearthMod {
     // Define mod id in a common place for everything to reference
     public static final String MOD_ID = "middleearthmod";
-    // Directly reference a slf4j logger
     private static final Logger LOGGER = LogUtils.getLogger();
 
     public MiddleearthMod() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
+        Moditems.register(modEventBus);
 
 
-        modEventBus.addListener(this::commonSetup);
+
+       modEventBus.addListener(this::commonSetup);
 
         MinecraftForge.EVENT_BUS.register(this);
         modEventBus.addListener(this::addCreative);
@@ -33,10 +37,14 @@ public class MiddleearthMod {
 
     private void commonSetup(final FMLCommonSetupEvent event) {
 
+
     }
 
     // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
+        if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
+            event.accept(Moditems.DWARFIRON);
+        }
 
     }
 
