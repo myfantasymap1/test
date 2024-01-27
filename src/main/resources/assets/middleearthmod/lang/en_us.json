@@ -1,6 +1,13 @@
 {
   "item.middleearthmod.dwarfiron": "Dwarfiron",
-  "item.middleearthmod.rawdwarfiron": "Raw Dwarfiron",
+  "item.middleearthmod.raw_dwarfiron": "Raw Dwarfiron",
 
+  "block.middleearthmod.dwarfiron_block": " Block of Dwarfiron",
+  "block.middleearthmod.raw_dwarfiron_block": "Block of Raw Dwarfiron",
+
+  "block.middleearthmod.dwarfiron_ore": " Dwarfiron ore",
+  "block.middleearthmod.deepslate_dwarfiron_ore" : "Deepslate Dwarfiron ore",
+  "block.middleearthmod.end_stone_dwarfiron_ore" : "Endstone Dwarfiron ore",
+  "block.middleearthmod.nether_dwarfiron_ore" : "nether Dwarfiron ore",
   "creativetab.middleearth_tab": "Dwarf Middleearth Tab"
 }

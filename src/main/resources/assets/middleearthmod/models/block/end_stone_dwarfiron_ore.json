@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "middleearthmod:block/end_stone_dwarfiron_ore"
+  }
+}

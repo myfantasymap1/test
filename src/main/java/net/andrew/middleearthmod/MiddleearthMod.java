@@ -33,9 +33,7 @@ public class MiddleearthMod {
         Moditems.register(modEventBus);
         ModBlocks.register(modEventBus);
 
-
-
-       modEventBus.addListener(this::commonSetup);
+        modEventBus.addListener(this::commonSetup);
 
         MinecraftForge.EVENT_BUS.register(this);
         modEventBus.addListener(this::addCreative);
@@ -43,8 +41,8 @@ public class MiddleearthMod {
 
     private void commonSetup(final FMLCommonSetupEvent event) {
 
-
     }
+
 
     // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event) {

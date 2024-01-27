@@ -2,6 +2,7 @@ package net.andrew.middleearthmod.item;
 
 
 import net.andrew.middleearthmod.MiddleearthMod;
+import net.andrew.middleearthmod.block.ModBlocks;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
@@ -22,6 +23,14 @@ public class ModCreativeModTabs {
                     .displayItems((pParameters, pOutput) -> {
                         pOutput.accept(Moditems.DWARFIRON.get());
                         pOutput.accept(Moditems.RAW_DWARFIRON.get());
+
+                        pOutput.accept(ModBlocks.DWARFIRON_BLOCK.get());
+
+
+                        pOutput.accept(ModBlocks.DWARFIRON_ORE.get());
+                        pOutput.accept(ModBlocks.DEEPSLATE_DWARFIRON_ORE.get());
+                        pOutput.accept(ModBlocks.NETHER_DWARFIRON_ORE.get());
+                        pOutput.accept(ModBlocks.END_STONE_DWARFIRON_ORE.get());
 
                     })
                     .build());
